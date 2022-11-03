@@ -21,7 +21,7 @@ elder(prince_andrew, prince_edward).
 /* rules */
 
 is_elder(A,B):-
-    older_than(A,B).
+    elder(A,B).
 is_elder(A,B):-
     elder(A,X), is_elder(X,B).
 
@@ -44,7 +44,3 @@ successor(X,Y):-
     female(X), female(Y),
     is_elder(X,Y),
 	not(queen(X)), not(queen(Y)).
-
-
-                           
-
